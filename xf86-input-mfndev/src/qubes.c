@@ -718,6 +718,9 @@ static void process_request(int fd, InputInfoPtr pInfo)
     case 'M':
         xf86PostMotionEvent(pInfo->dev, 1, 0, 2, cmd.arg1, cmd.arg2);
         break;
+    case 'm':
+        xf86PostMotionEvent(pInfo->dev, 0, 0, 2, cmd.arg1, cmd.arg2);
+        break;
     case 'K':
         xf86PostKeyboardEvent(pInfo->dev, cmd.arg1, cmd.arg2);
         break;
